@@ -1,12 +1,66 @@
 @import "reset.scss";
 @import "colors.scss";
 $thefont: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+$statsfz: 3.5rem;
+@mixin icon-display {
+    display: flex;
+    align-items: end;
+}
 html {
     font-size: 10px;
 }
 body {
     background-color: $sea-color;
 }
+
+.header {
+    background-color: sienna;
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+.stats {
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+.health {
+    @include icon-display();
+    &__icon {
+    }
+
+    &__count {
+        font-size: $statsfz;
+    }
+}
+.icon {
+    img {
+        width: 5rem;
+    }
+    margin-right: 0.5rem;
+}
+.gold {
+    @include icon-display();
+    &__icon {
+    }
+
+    &__count {
+        font-size: $statsfz;
+    }
+}
+.wave {
+    @include icon-display();
+    &__icon {
+    }
+
+    &__count {
+        font-size: $statsfz;
+    }
+}
+
 .start {
     &__window {
         background-color: maroon;
