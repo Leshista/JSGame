@@ -1,14 +1,84 @@
+@import "reset.scss";
 @import "colors.scss";
+$thefont: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+html {
+    font-size: 10px;
+}
+body {
+    background-color: $sea-color;
+}
 .start {
     &__window {
-        width: 97vw;
-        height: 98vh;
+        background-color: maroon;
+        max-width: 120rem;
+        margin: 0 auto;
+        border-left: 1rem groove $oldpaper;
+        border-right: 1rem ridge $oldpaper;
+        box-sizing: border-box;
+        transition-property: opacity;
+        transition-duration: 1.5s;
+    }
+
+    &__wrapper {
+        height: 100vh;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
+    &__block {
+        font-family: $thefont;
+        background-color: $oldpaper;
+        width: 40rem;
+        height: 50rem;
+        border-top: 1rem groove $red-orange;
+        border-left: 1rem groove $red-orange;
+        border-right: 1rem ridge $red-orange;
+        border-bottom: 1rem ridge $red-orange;
+        border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 1px 5px $orange;
+    }
+
     &__button {
+        font-family: $thefont;
+        font-size: 4rem;
+        width: 25rem;
+        height: 5.5rem;
+        text-shadow: 5px 5px 5px $red-orange;
+        background-color: $oldpaper;
+        border: none;
+        &::first-letter {
+            color: maroon;
+        }
+        animation: opacity 1s linear 0.2s infinite alternate running;
     }
 }
+
+.greetings {
+    text-align: center;
+    padding: 0 0.5rem;
+    margin: -1rem 0 3rem 0;
+    font-size: 5.5rem;
+    &::first-letter {
+        color: maroon;
+    }
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} ;
