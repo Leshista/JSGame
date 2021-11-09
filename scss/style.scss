@@ -10,7 +10,9 @@ html {
     font-size: 10px;
 }
 body {
-    background-color: $sea-color;
+    background-color: #a08cd8;
+    transition-property: background-color;
+    transition-duration: 2s;
 }
 
 .header {
@@ -18,7 +20,7 @@ body {
     display: none;
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 1.5s;
+    transition-duration: 2s;
 }
 .stats {
     display: flex;
@@ -70,11 +72,11 @@ body {
 
 .start {
     &__window {
-        background-color: maroon;
+        background-color: rgb(190, 20, 20);
         max-width: 120rem;
         margin: 0 auto;
-        border-left: 1rem groove $oldpaper;
-        border-right: 1rem ridge $oldpaper;
+        border-left: 1rem ridge rgba(206, 206, 206, 0.74);
+        border-right: 1rem groove rgba(206, 206, 206, 0.74);
         box-sizing: border-box;
         transition-property: opacity;
         transition-duration: 1.5s;

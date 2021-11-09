@@ -1,4 +1,5 @@
 const header = document.querySelector('.header');
+const body = document.querySelector('body');
 const startWindow = document.querySelector('.start__window');
 const startButton = document.querySelector('.start__button');
 const backgroundMusic = document.querySelector('.sounds__background-music');
@@ -14,7 +15,8 @@ startButton.addEventListener('click', function () {
         header.style.display = 'block';
         setTimeout(function () {
             header.style.opacity = '1';
+            body.style.backgroundColor = '#808c6c';
             backgroundMusic.play();
-        }, 100);
+        }, 500);
     }, 1500);
 });
