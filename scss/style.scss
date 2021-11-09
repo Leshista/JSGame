@@ -10,7 +10,7 @@ html {
     font-size: 10px;
 }
 body {
-    background-color: #a08cd8;
+    background: darken(#a08cd8, 30%);
     transition-property: background-color;
     transition-duration: 2s;
 }
@@ -72,7 +72,7 @@ body {
 
 .start {
     &__window {
-        background-color: rgb(190, 20, 20);
+        background: radial-gradient(rgb(190, 20, 20), darken(rgb(190, 20, 20), 25%));
         max-width: 120rem;
         margin: 0 auto;
         border-left: 1rem ridge rgba(206, 206, 206, 0.74);
@@ -91,7 +91,7 @@ body {
 
     &__block {
         font-family: $thefont;
-        background-color: $oldpaper;
+        background: radial-gradient($oldpaper, darken($oldpaper, 7%));
         width: 40rem;
         height: 50rem;
         border-top: 1rem groove $red-orange;
@@ -104,6 +104,7 @@ body {
         justify-content: center;
         align-items: center;
         text-shadow: 1px 1px 5px $orange;
+        box-shadow: -7px 7px 5px rgba(0, 0, 0, 0.589);
     }
 
     &__button {
@@ -112,7 +113,7 @@ body {
         width: 25rem;
         height: 5.5rem;
         text-shadow: 5px 5px 5px $red-orange;
-        background-color: $oldpaper;
+        background: transparent;
         border: none;
         outline: none;
         &::first-letter {
