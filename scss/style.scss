@@ -61,6 +61,13 @@ body {
     }
 }
 
+.enemy {
+    display: none;
+    img {
+        width: 5rem;
+    }
+}
+
 .start {
     &__window {
         background-color: maroon;
