@@ -1,5 +1,6 @@
 const header = document.querySelector('.header');
 const body = document.querySelector('body');
+const main = document.querySelector('.main');
 const startWindow = document.querySelector('.start__window');
 const startButton = document.querySelector('.start__button');
 const backgroundMusic = document.querySelector('.sounds__background-music');
@@ -13,9 +14,11 @@ startButton.addEventListener('click', function () {
         startWindow.style.display = 'none';
         // startGame();
         header.style.display = 'block';
+        main.style.display = 'flex';
+
         setTimeout(function () {
             header.style.opacity = '1';
-            body.style.backgroundColor = '#808c6c';
+            main.style.opacity = '1';
             backgroundMusic.play();
         }, 500);
     }, 1500);

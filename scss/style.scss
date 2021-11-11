@@ -10,8 +10,8 @@ html {
     font-size: 10px;
 }
 body {
-    background: darken(#a08cd8, 30%);
-    transition-property: background-color;
+    background-image: linear-gradient(360deg, darken($lazurite, 50%) 30%, darken($oldpaper, 30%));
+    transition-property: background-image;
     transition-duration: 2s;
 }
 
@@ -76,6 +76,10 @@ body {
 .main {
     display: flex;
     justify-content: center;
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
 }
 
 .tile {
