@@ -10,14 +10,14 @@ html {
     font-size: 10px;
 }
 body {
-    background-image: linear-gradient(360deg, darken($lazurite, 50%) 30%, darken($oldpaper, 30%));
+    background-image: linear-gradient(360deg, darken($lazurite, 50%) 3%, darken($oldpaper, 30%));
     transition-property: background-image;
     transition-duration: 2s;
 }
 
 .header {
     height: 7vh;
-    background-color: sienna;
+    background-color: darken($oldpaper, 32%);
     display: none;
     opacity: 0;
     transition-property: opacity;
@@ -82,10 +82,29 @@ body {
     transition-duration: 2s;
 }
 
+.tile-col:first-of-type {
+    border-left: 1rem ridge rgba(206, 206, 206, 0.74);
+    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+    border-image-slice: 1;
+}
+
+.tile-col:nth-last-of-type(2) {
+    border-right: 1rem groove rgba(206, 206, 206, 0.74);
+    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+    border-image-slice: 1;
+}
+
 .tile {
     height: 5rem;
     width: 5rem;
     background-image: url(../images/tiles/grass.png);
+}
+
+.tile-1 {
+    border-top: 1rem groove rgba(206, 206, 206, 0.74);
+    box-sizing: border-box;
+    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+    border-image-slice: 1;
 }
 
 .start {
@@ -95,6 +114,8 @@ body {
         margin: 0 auto;
         border-left: 1rem ridge rgba(206, 206, 206, 0.74);
         border-right: 1rem groove rgba(206, 206, 206, 0.74);
+        border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+        border-image-slice: 1;
         box-sizing: border-box;
         transition-property: opacity;
         transition-duration: 1.5s;
