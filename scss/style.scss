@@ -74,12 +74,14 @@ body {
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    display: none;
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 2s;
+    &__wrapper {
+        display: flex;
+        display: none;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 2s;
+        height: 100vh;
+    }
 }
 
 .tile-col:first-of-type {
