@@ -11,16 +11,14 @@ let screenWidth = window.screen.width;
 function screenSize() {
     if (screenWidth <= 440) {
         return 'xs';
-    } else if (screenWidth <= 768) {
+    } else if (screenWidth <= 1024) {
         return 'sm';
-    } else if (screenWidth <= 992) {
-        return 'md';
     } else if (screenWidth <= 1200) {
-        return 'lg';
+        return 'md';
     } else if (screenWidth <= 1400) {
-        return 'xl';
+        return 'lg';
     } else {
-        return 'xxl';
+        return 'xl';
     };
 };
 
@@ -38,14 +36,37 @@ function createTileCols(cols, rows) {
 };
 
 function startGame() {
+
     if (screenSize() == 'xs') {
         console.log(`Screen size is ${screenSize()}.`)
         createTileCols(6, 13);
-        let tileCols = document.querySelectorAll('.tile-col');
-        tileCols.forEach(function (e, i, a) {
-            e.style.width = '100%';
-        });
+        disableBorder(mainWrapper);
+
+    } else if (screenSize() == 'sm') {
+        console.log(`Screen size is ${screenSize()}.`)
+        createTileCols(15, 16);
+        disableBorder(mainWrapper);
+
+    } else if (screenSize() == 'md') {
+        console.log(`Screen size is ${screenSize()}.`)
+        createTileCols(23, 15);
+
+    } else if (screenSize() == 'lg') {
+        console.log(`Screen size is ${screenSize()}.`)
+        createTileCols(27, 15);
+    } else {
+        console.log(`Screen size is ${screenSize()}.`)
+        createTileCols(30, 16);
     };
+
+    let tileCols = document.querySelectorAll('.tile-col');
+    tileCols.forEach(function (e, i, a) {
+        e.style.width = '100%';
+    });
+};
+
+function disableBorder(element) {
+    element.style.border = 'none';
 };
 
 function setOpacity(element, value) {
@@ -68,7 +89,7 @@ startButton.addEventListener('click', function () {
         setTimeout(() => {
             setOpacity(header, 1);
             setOpacity(mainWrapper, 1);
-            backgroundMusic.play();
+            // backgroundMusic.play();
         }, 500);
     }, 1500);
 }); // After the start button is clicked, we change opacity of the start window to 0, after this we remove it. Then we activate header and main divs, setting their display values from none to visible ones, then we change their opacity to 1 for them to be visible. We need them to turn visible a little bit later than changing their display, otherwise transitions will not work.

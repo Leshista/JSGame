@@ -9,6 +9,7 @@ $statsfz: 3.5rem;
 
 html {
     font-size: 10px;
+    height: 100%;
 }
 body {
     background-image: linear-gradient(360deg, darken($lazurite, 50%) 3%, darken($oldpaper, 30%));
@@ -75,16 +76,16 @@ body {
 }
 
 .main {
+    max-width: 152rem;
+    margin: 0 auto;
     &__wrapper {
         display: flex;
+        justify-content: center;
         display: none;
         opacity: 0;
         transition-property: opacity;
         transition-duration: 2s;
-        border-left: 1rem ridge rgba(206, 206, 206, 0.74);
-        border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
-
-        border-right: 1rem groove rgba(206, 206, 206, 0.74);
+        border: 1rem ridge rgba(206, 206, 206, 0.74);
         border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
         border-image-slice: 1;
     }
