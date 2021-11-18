@@ -40,7 +40,7 @@ function createTileCols(cols, rows) {
 function startGame() {
     if (screenSize() == 'xs') {
         console.log(`Screen size is ${screenSize()}.`)
-        createTileCols(6, 12);
+        createTileCols(6, 14);
         let tileCols = document.querySelectorAll('.tile-col');
         tileCols.forEach(function (e, i, a) {
             e.style.width = '100%';
