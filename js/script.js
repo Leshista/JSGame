@@ -9,7 +9,7 @@ const buttonSound = document.querySelector('.sounds__button-sound');
 let screenWidth = window.screen.width;
 
 function screenSize() {
-    if (screenWidth <= 576) {
+    if (screenWidth <= 440) {
         return 'xs';
     } else if (screenWidth <= 768) {
         return 'sm';
@@ -37,6 +37,16 @@ function createTileCols(cols, rows) {
     };
 };
 
+function startGame() {
+    if (screenSize() == 'xs') {
+        console.log(`Screen size is ${screenSize()}.`)
+        createTileCols(6, 12);
+        let tileCols = document.querySelectorAll('.tile-col');
+        tileCols.forEach(function (e, i, a) {
+            e.style.width = '100%';
+        });
+    };
+};
 
 function setOpacity(element, value) {
     element.style.opacity = `${value}`;
@@ -51,9 +61,9 @@ startButton.addEventListener('click', function () {
     setOpacity(startWindow, 0);
     setTimeout(() => {
         startWindow.remove();
-        // startGame();
         setDisplay(header, 'block');
         setDisplay(mainWrapper, 'flex');
+        startGame();
 
         setTimeout(() => {
             setOpacity(header, 1);
@@ -62,4 +72,3 @@ startButton.addEventListener('click', function () {
         }, 500);
     }, 1500);
 }); // After the start button is clicked, we change opacity of the start window to 0, after this we remove it. Then we activate header and main divs, setting their display values from none to visible ones, then we change their opacity to 1 for them to be visible. We need them to turn visible a little bit later than changing their display, otherwise transitions will not work.
-createTileCols(50, 30)

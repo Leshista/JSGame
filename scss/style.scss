@@ -80,25 +80,21 @@ body {
         opacity: 0;
         transition-property: opacity;
         transition-duration: 2s;
-        height: 100vh;
+        border-left: 1rem ridge rgba(206, 206, 206, 0.74);
+        border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+
+        border-right: 1rem groove rgba(206, 206, 206, 0.74);
+        border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+        border-image-slice: 1;
     }
 }
 
-.tile-col:first-of-type {
-    border-left: 1rem ridge rgba(206, 206, 206, 0.74);
-    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
-    border-image-slice: 1;
+.tile-col {
+    flex-direction: column;
 }
-
-.tile-col:nth-last-of-type(2) {
-    border-right: 1rem groove rgba(206, 206, 206, 0.74);
-    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
-    border-image-slice: 1;
-}
-
 .tile {
     height: 5rem;
-    width: 5rem;
+    min-width: 5rem;
     background-image: url(../images/tiles/grass.png);
 }
 
