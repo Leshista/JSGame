@@ -1,6 +1,7 @@
 @import "reset.scss";
 @import "colors.scss";
 @import "tiles.scss";
+@import "creatures.scss";
 $thefont: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 $statsfz: 3.5rem;
 @mixin icon-display {
@@ -69,10 +70,12 @@ body {
     }
 }
 
-.enemy {
-    display: none;
+.creature {
     img {
         width: 5rem;
+    }
+    &__rat {
+        display: none;
     }
 }
 
@@ -99,6 +102,7 @@ body {
     min-height: 5rem;
     min-width: 5rem;
     background-size: cover;
+    position: relative;
 }
 
 .start {

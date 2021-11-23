@@ -23,4 +23,5 @@ function startGame() {
         console.log(`Screen size is ${screenSize()}.`)
         createTileCols(30, 16);
     };
+
 };
