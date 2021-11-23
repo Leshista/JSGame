@@ -5,6 +5,7 @@ function startGame() {
         console.log(`Screen size is ${screenSize()}.`)
         createTileCols(6, 13);
         disableBorder(mainWrapper); // At smaller resolutions we have no need for the border
+        setTiles(screenSize());
 
     } else if (screenSize() == 'sm') {
         console.log(`Screen size is ${screenSize()}.`)

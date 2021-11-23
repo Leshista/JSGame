@@ -1,5 +1,6 @@
 @import "reset.scss";
 @import "colors.scss";
+@import "tiles.scss";
 $thefont: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 $statsfz: 3.5rem;
 @mixin icon-display {
@@ -97,14 +98,7 @@ body {
 .tile {
     min-height: 5rem;
     min-width: 5rem;
-    background-image: url(../images/tiles/grass.png);
-}
-
-.tile-1 {
-    border-top: 1rem groove rgba(206, 206, 206, 0.74);
-    box-sizing: border-box;
-    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
-    border-image-slice: 1;
+    background-size: cover;
 }
 
 .start {

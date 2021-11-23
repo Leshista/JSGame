@@ -17,7 +17,7 @@ startButton.addEventListener('click', function () {
         setTimeout(() => {
             setOpacity(header, 1);
             setOpacity(mainWrapper, 1);
-            // backgroundMusic.play();
+            backgroundMusic.play();
         }, 500);
     }, 1500);
 }); // Then we activate header and main divs, setting their display values from none to visible ones, then we change their opacity to 1 for them to be visible. We need them to turn visible a little bit later than changing their display, otherwise transitions will not work.
