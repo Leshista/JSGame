@@ -11,7 +11,10 @@ function startGame() {
         const leftEdge = (document.querySelector('.tile-col').offsetLeft) / 10;
         const colsCount = document.querySelectorAll('.tile-col').length;
         const rightEdge = (document.querySelector(`.tile-col-${colsCount}`).offsetLeft) / 10;
-        mc.move(leftEdge, rightEdge);
+        const topEdge = (document.querySelector('.tile-col-1__tile-1').offsetTop / 10);
+        const rowCount = ((document.querySelector('.tile-col')).querySelectorAll('.tile')).length
+        const bottomEdge = (document.querySelector(`.tile-col-1__tile-${rowCount}`).offsetTop / 10);
+        mc.move(leftEdge, rightEdge, topEdge, bottomEdge);
     } else if (screenSize() == 'sm') {
         console.log(`Screen size is ${screenSize()}.`)
         createTileCols(15, 16);
