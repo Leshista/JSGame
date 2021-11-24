@@ -7,7 +7,9 @@ function startGame() {
         disableBorder(mainWrapper); // At smaller resolutions we have no need for the border
         setTiles(screenSize());
         const mcStartPoint = document.querySelector('.tile-col-3__tile-9');
-        const mc = new Creature('mc', `${mcStartPoint.offsetLeft / 10}`, `${mcStartPoint.offsetTop / 10}`, `${mcStartPoint.offsetWidth / 10}`, `${mcStartPoint.offsetHeight / 10}`);
+        const mc = new Mc('mc', `${mcStartPoint.offsetLeft / 10}`, `${mcStartPoint.offsetTop / 10}`, `${mcStartPoint.offsetWidth / 10}`, `${mcStartPoint.offsetHeight / 10}`);
+        const leftEdge = (document.querySelector('.tile-col').offsetLeft) / 10;
+        mc.moveLeft(leftEdge);
 
     } else if (screenSize() == 'sm') {
         console.log(`Screen size is ${screenSize()}.`)

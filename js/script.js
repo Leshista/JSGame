@@ -14,7 +14,6 @@ startButton.addEventListener('click', function () {
         setDisplay(mainWrapper, 'flex');
         startGame();
 
-
         setTimeout(() => {
             setOpacity(header, 1);
             setOpacity(mainWrapper, 1);
