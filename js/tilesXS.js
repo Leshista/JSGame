@@ -67,7 +67,7 @@ function setTiles(screenSize) {
     setTileType(5, 10, 'lighthouse');
     setTileType(5, 11, 'shore-corner');
     setTileType(5, 12, 'shore-inverse-corner');
-    setTileType(5, 13, 'water');
+    setTileType(5, 13, 'ship');
 
     setTileType(6, 1, 'mountain');
     setTileType(6, 2, 'lake');
