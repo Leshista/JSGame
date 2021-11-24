@@ -15,6 +15,8 @@ function startGame() {
         const rowCount = ((document.querySelector('.tile-col')).querySelectorAll('.tile')).length
         const bottomEdge = (document.querySelector(`.tile-col-1__tile-${rowCount}`).offsetTop / 10);
         mc.move(leftEdge, rightEdge, topEdge, bottomEdge);
+        allTiles = document.querySelectorAll('.tile');
+        mc.moveTap(allTiles);
     } else if (screenSize() == 'sm') {
         console.log(`Screen size is ${screenSize()}.`)
         createTileCols(15, 16);
