@@ -13,9 +13,6 @@ startButton.addEventListener('click', function () {
         setDisplay(header, 'block');
         setDisplay(mainWrapper, 'flex');
         startGame();
-        let htmlMC = document.querySelector('.creature__mc');
-        let startPoint = document.querySelector('.tile-col-3__tile-9');
-        let mc = new Creature('mc', `${startPoint.offsetLeft / 10}`, `${startPoint.offsetTop / 10}`, `${startPoint.offsetWidth / 10}`, `${startPoint.offsetHeight / 10}`);
 
 
         setTimeout(() => {
