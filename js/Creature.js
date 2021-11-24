@@ -13,7 +13,7 @@ class Creature {
         this.height = this.tile.style.height = `${height}rem`;
         this.ySize = +this.height.slice(0, -3);
         this.img = document.createElement('img'); // Adding an img tag
-        this.img.src = `../images/creatures/${type}.png`; // Setting it to our needs
+        this.img.src = `images/creatures/${type}.png`; // Setting it to our needs
         this.tile.appendChild(this.img); // Append img to our div
         mainWrapper.appendChild(this.tile); // And our div to tilemap
     };
