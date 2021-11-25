@@ -106,44 +106,6 @@ body {
 }
 
 .start {
-    &__window {
-        background: radial-gradient(rgb(190, 20, 20), darken(rgb(190, 20, 20), 25%));
-        max-width: 120rem;
-        margin: 0 auto;
-        border-left: 1rem ridge rgba(206, 206, 206, 0.74);
-        border-right: 1rem groove rgba(206, 206, 206, 0.74);
-        border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
-        border-image-slice: 1;
-        box-sizing: border-box;
-        transition-property: opacity;
-        transition-duration: 1.5s;
-    }
-
-    &__wrapper {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__block {
-        font-family: $thefont;
-        background: radial-gradient($oldpaper, darken($oldpaper, 7%));
-        width: 40rem;
-        height: 50rem;
-        border-top: 1rem groove $red-orange;
-        border-left: 1rem groove $red-orange;
-        border-right: 1rem ridge $red-orange;
-        border-bottom: 1rem ridge $red-orange;
-        border-radius: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 1px 1px 5px $orange;
-        box-shadow: -7px 7px 5px rgba(0, 0, 0, 0.589);
-    }
-
     &__button {
         font-family: $thefont;
         font-size: 4rem;
@@ -165,6 +127,44 @@ body {
     }
 }
 
+.window {
+    background: radial-gradient(rgb(190, 20, 20), darken(rgb(190, 20, 20), 25%));
+    max-width: 120rem;
+    margin: 0 auto;
+    border-left: 1rem ridge rgba(206, 206, 206, 0.74);
+    border-right: 1rem groove rgba(206, 206, 206, 0.74);
+    border-image: linear-gradient(360deg, darken($oldpaper, 30%), rgb(190, 20, 20));
+    border-image-slice: 1;
+    box-sizing: border-box;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    font-family: $thefont;
+    background: radial-gradient($oldpaper, darken($oldpaper, 7%));
+    width: 40rem;
+    height: 50rem;
+    border-top: 1rem groove $red-orange;
+    border-left: 1rem groove $red-orange;
+    border-right: 1rem ridge $red-orange;
+    border-bottom: 1rem ridge $red-orange;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 5px $orange;
+    box-shadow: -7px 7px 5px rgba(0, 0, 0, 0.589);
+}
+
 .greetings {
     text-align: center;
     padding: 0 0.5rem;
@@ -174,6 +174,16 @@ body {
         color: maroon;
     }
 }
+
+.win,
+.lose,
+.credit {
+    &__wrapper {
+        // display: none;
+        // opacity: 0;
+    }
+}
+
 .bold {
     font-weight: bold;
 }
