@@ -11,7 +11,7 @@ $statsfz: 3.5rem;
 
 html {
     font-size: 10px;
-    height: 100%;
+    // height: 100%;
 }
 body {
     background-image: linear-gradient(360deg, darken($lazurite, 50%) 3%, darken($oldpaper, 30%));
@@ -172,8 +172,8 @@ body {
 .lose,
 .credit {
     &__wrapper {
-        // display: none;
-        // opacity: 0;
+        display: none;
+        opacity: 0;
     }
 }
 
