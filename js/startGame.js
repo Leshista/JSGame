@@ -27,8 +27,9 @@ function startGame() {
         allTiles = document.querySelectorAll('.tile'); // Getting all the tiles
         mc.moveTap(allTiles); //Enabling the player to move by tapping on the tiles
 
-        createEnemy(allTiles);
-
+        createEnemy(allTiles).tile.addEventListener('click', function () {
+            mc.killAnEnemy(this);
+        });
     } else if (screenSize() == 'sm') {
         console.log(`Screen size is ${screenSize()}.`)
         createTileCols(15, 16);

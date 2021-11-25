@@ -37,4 +37,13 @@ class Mc extends Creature {
             });
         });
     };
+    killAnEnemy(enemy) {
+        this.left = this.tile.style.left = `${enemy.offsetLeft / 10}rem`;
+        this.x = +this.left.slice(0, -3);
+        this.top = this.tile.style.top = `${enemy.offsetTop / 10}rem`;
+        this.y = +this.top.slice(0, -3);
+        enemy.remove();
+        let getKilledName = () => enemy.classList[1].slice(10);
+        console.log(`You've killed a ${getKilledName()}.`);
+    };
 };
