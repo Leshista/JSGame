@@ -1,6 +1,7 @@
 class Mc extends Creature {
     constructor(type, startX, startY, width, height) {
         super(type, startX, startY, width, height);
+        this.currentGold = +(document.querySelector('.gold__count').textContent);
     };
     move(leftEdge, rightEdge, topEdge, bottomEdge) { // Moving our character
         window.addEventListener('keydown', (e) => {
@@ -43,7 +44,13 @@ class Mc extends Creature {
         this.top = this.tile.style.top = `${enemy.offsetTop / 10}rem`;
         this.y = +this.top.slice(0, -3);
         enemy.remove();
-        let getKilledName = () => enemy.classList[1].slice(10);
+        const getKilledName = () => enemy.classList[1].slice(10);
         console.log(`You've killed a ${getKilledName()}.`);
+        if (getKilledName() == 'rat') {
+            console.log(`You've got 1 gold coin`);
+            this.currentGold += 1;
+            document.querySelector('.gold__count').textContent = this.currentGold;
+        };
+        console.log(`You have ${this.currentGold} gold coins now.`);
     };
 };
