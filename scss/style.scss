@@ -17,6 +17,7 @@ body {
     background-image: linear-gradient(360deg, darken($lazurite, 50%) 3%, darken($oldpaper, 30%));
     transition-property: background-image;
     transition-duration: 2s;
+    overflow: hidden;
 }
 
 .header {
@@ -67,15 +68,6 @@ body {
 
     &__count {
         font-size: $statsfz;
-    }
-}
-
-.creature {
-    img {
-        width: 5rem;
-    }
-    &__rat {
-        display: none;
     }
 }
 
@@ -163,15 +155,14 @@ body {
     align-items: center;
     text-shadow: 1px 1px 5px $orange;
     box-shadow: -7px 7px 5px rgba(0, 0, 0, 0.589);
-}
-
-.greetings {
-    text-align: center;
-    padding: 0 0.5rem;
-    margin: -1rem 0 3rem 0;
-    font-size: 5.5rem;
-    &::first-letter {
-        color: maroon;
+    &__text {
+        text-align: center;
+        padding: 0 0.5rem;
+        margin: -1rem 0 3rem 0;
+        font-size: 5.5rem;
+        &::first-letter {
+            color: maroon;
+        }
     }
 }
 
