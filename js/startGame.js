@@ -28,7 +28,25 @@ function startGame() {
         mc.moveTap(allTiles); //Enabling the player to move by tapping on the tiles
         function createEnemyShort() {
             createEnemy(allTiles).tile.addEventListener('click', function () {
-                mc.killAnEnemy(this);
+                mc.killAnEnemyTap(this);
+            });
+            window.addEventListener('keydown', function (e) {
+                let enemyList = document.querySelectorAll('.creature__rat');
+                enemyList.forEach(enemy => {
+                    console.log(mc.tile.offsetLeft);
+                    console.log(enemy.offsetLeft)
+                    if (mc.tile.offsetLeft == enemy.offsetLeft && mc.tile.offsetTop == enemy.offsetTop && e.key == 'f') {
+                        enemy.remove();
+                        const getKilledName = () => enemy.classList[1].slice(10);
+                        console.log(`You've killed a ${getKilledName()}.`);
+                        if (getKilledName() == 'rat') {
+                            console.log(`You've got 1 gold coin.`);
+                            mc.currentGold += 1;
+                            document.querySelector('.gold__count').textContent = mc.currentGold;
+                        };
+                        console.log(`You have ${mc.currentGold} gold coins now.`);
+                    };
+                });
             });
         };
         createEnemyShort();

@@ -29,7 +29,7 @@ class Mc extends Creature {
         });
     };
     moveTap(allTiles) { // Move our character wherever the user taps(For mobile)
-        allTiles.forEach((e) => {
+        allTiles.forEach(e => {
             e.addEventListener('click', () => {
                 this.left = this.tile.style.left = `${e.offsetLeft / 10}rem`;
                 this.x = +this.left.slice(0, -3);
@@ -38,7 +38,7 @@ class Mc extends Creature {
             });
         });
     };
-    killAnEnemy(enemy) {
+    killAnEnemyTap(enemy) {
         this.left = this.tile.style.left = `${enemy.offsetLeft / 10}rem`;
         this.x = +this.left.slice(0, -3);
         this.top = this.tile.style.top = `${enemy.offsetTop / 10}rem`;
@@ -47,7 +47,7 @@ class Mc extends Creature {
         const getKilledName = () => enemy.classList[1].slice(10);
         console.log(`You've killed a ${getKilledName()}.`);
         if (getKilledName() == 'rat') {
-            console.log(`You've got 1 gold coin`);
+            console.log(`You've got 1 gold coin.`);
             this.currentGold += 1;
             document.querySelector('.gold__count').textContent = this.currentGold;
         };
