@@ -2,14 +2,14 @@ class Mc extends Creature {
     constructor(type, startX, startY, width, height) {
         super(type, startX, startY, width, height);
     };
-    move(leftEdge, rightEdge, topEdge, bottomEdge) {
+    move(leftEdge, rightEdge, topEdge, bottomEdge) { // Moving our character
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'a' || e.key === 'ArrowLeft') {
-                if (this.x > leftEdge) {
+            if (e.key === 'a' || e.key === 'ArrowLeft') { // If the button was pressed
+                if (this.x > leftEdge) { // If we don't stand at the left border
                     this.x -= this.xSize;
-                    this.left = this.tile.style.left = `${this.x}rem`;
+                    this.left = this.tile.style.left = `${this.x}rem`; // Go to left one width of a tile
                 };
-            } else if (e.key === 'd' || e.key === 'ArrowRight') {
+            } else if (e.key === 'd' || e.key === 'ArrowRight') { // The same but with different directions
                 if (this.x < rightEdge) {
                     this.x += this.xSize;
                     this.right = this.tile.style.left = `${this.x}rem`;
@@ -27,7 +27,7 @@ class Mc extends Creature {
             };
         });
     };
-    moveTap(allTiles) {
+    moveTap(allTiles) { // Move our character wherever the user taps(For mobile)
         allTiles.forEach((e) => {
             e.addEventListener('click', () => {
                 this.left = this.tile.style.left = `${e.offsetLeft / 10}rem`;
